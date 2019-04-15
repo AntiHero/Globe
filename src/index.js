@@ -194,7 +194,7 @@ function drawImages() {
 
     map.onload = function() {
       contextLayer.drawImage(map, -canvasLayer.width + step, 0, canvasLayer.width * 3, canvasLayer.height);
-      contextLayer.font = "200px Arial bold";
+      contextLayer.font = "172px Arial bold";
       contextLayer.fillStyle = "rgba(255,255,255, 0.5)";
       contextLayer.textAlign = 'center';
       contextLayer.fillText("MAERSK", canvasLayer.width / 2, canvasLayer.height / 2 + canvasLayer.height / 20);
