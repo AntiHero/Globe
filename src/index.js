@@ -64,7 +64,7 @@ function drawImages() {
   const trainImageSpeed = .4;
   const truckImageSpeed = .33;
   const africaImageSpeed = .5;
-  const australiaImageSpeed = .3;
+  const australiaImageSpeed = .25;
   const airplaneImageSpeed = .18;
   const shipImageSpeed = .14;
   const eyeImageSpeed = .2;
