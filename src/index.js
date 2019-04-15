@@ -104,7 +104,7 @@ function drawImages() {
   let australia = new Image()
 
   australia.onload = function() {
-    contextMiddle.drawImage(australia, canvasLayer.width / 2 + canvas.width / 1.5 + australiaStep - xScaleAustralia / 20, 6 * canvas.width / 10 - yScaleAustralia / 5, xScaleAustralia += australiaImageSpeed, yScaleAustralia += australiaImageSpeed);
+    contextMiddle.drawImage(australia, canvasLayer.width / 2 + canvas.width + australiaStep - xScaleAustralia / 20, 6 * canvas.width / 10 - yScaleAustralia / 5, xScaleAustralia += australiaImageSpeed, yScaleAustralia += australiaImageSpeed);
   };
 
   australia.src = '../images/australia.png';
