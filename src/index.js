@@ -60,12 +60,13 @@ window.onload = function() {
  
   
 function drawImages() {
+  contextMiddle.clearRect(0, 0, contextMiddle.width, contextMiddle.height);
   velocity = 2;
   const trainImageSpeed = .4;
   const truckImageSpeed = .33;
   const africaImageSpeed = .5;
-  const australiaImageSpeed = .25;
-  const airplaneImageSpeed = .18;
+  const australiaImageSpeed = .22;
+  const airplaneImageSpeed = .2;
   const shipImageSpeed = .14;
   const eyeImageSpeed = .2;
   
@@ -104,7 +105,7 @@ function drawImages() {
   let australia = new Image()
 
   australia.onload = function() {
-    contextMiddle.drawImage(australia, canvasLayer.width / 2 + canvas.width + australiaStep - xScaleAustralia / 20, 6 * canvas.width / 10 - yScaleAustralia / 5, xScaleAustralia += australiaImageSpeed, yScaleAustralia += australiaImageSpeed);
+    contextMiddle.drawImage(australia, canvasLayer.width / 2 + canvas.width * 1 + australiaStep - xScaleAustralia / 20, 6 * canvas.width / 10 - yScaleAustralia / 5, xScaleAustralia += australiaImageSpeed, yScaleAustralia += australiaImageSpeed);
   };
 
   australia.src = '../images/australia.png';
@@ -193,28 +194,17 @@ function drawImages() {
 
     map.onload = function() {
       contextLayer.drawImage(map, -canvasLayer.width + step, 0, canvasLayer.width * 3, canvasLayer.height);
+      contextLayer.font = "172px Arial bold";
+      contextLayer.fillStyle = "rgba(0,147,201, 0.5)";
+      contextLayer.textAlign = 'center';
+      contextLayer.fillText("MAERSK", canvasLayer.width / 2, canvasLayer.height / 2 + canvasLayer.height / 20);
     };
   
     map.src = '../images/map.png';
 
-
     step -= velocity;
     window.requestAnimationFrame(animateGlobe);
     if (step <= -canvasLayer.width) {
-      // xScaleTrain = 10;
-      // yScaleTrain = 10;
-      // xScaleTruck = 10;
-      // yScaleTruck = 10;
-      // xScaleAfrica = 10;
-      // yScaleAfrica = 10;
-      // xScaleAustralia= 0;
-      // yScaleAustralia = 0;
-      // xScaleAirplane= 0;
-      // yScaleAirplane = 0;
-      // xScaleShip= 0;
-      // yScaleShip = 0;
-      // xScaleEye= 0;
-      // yScaleEye = 0;
       step = 0;
     } 
   }
@@ -282,7 +272,7 @@ function drawImages() {
   
   function globeArea() {
     context.lineWidth = 2;
-    context.strokeStyle = "#ffffff";
+    context.strokeStyle = "#adacac";
     context.beginPath();
     context.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, 0,  2 * Math.PI);
     context.stroke();
