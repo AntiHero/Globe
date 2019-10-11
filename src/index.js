@@ -200,7 +200,7 @@ function drawImages() {
       contextLayer.fillText("MAERSK", canvasLayer.width / 2, canvasLayer.height / 2 + canvasLayer.height / 20);
     };
   
-    map.src = '../images/map.png';
+    map.src = '../images/map.jpg';
 
     step -= velocity;
     window.requestAnimationFrame(animateGlobe);
